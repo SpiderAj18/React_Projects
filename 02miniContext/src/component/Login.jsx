@@ -10,6 +10,7 @@ function Login(){
     
     const handleSubmit =(e)=>{
         e.preventDefault();
+        console.log('hello');
         setUser({username, password});
     }
       return(
