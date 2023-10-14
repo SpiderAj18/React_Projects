@@ -8,7 +8,8 @@
 		"vscode": {
 			"extensions": [
 				"dsznajder.es7-react-js-snippets",
-				"sidharthachatterjee.vscode-tailwindcss"
+				"sidharthachatterjee.vscode-tailwindcss",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	}
