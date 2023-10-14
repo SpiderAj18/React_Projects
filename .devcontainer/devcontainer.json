@@ -1,0 +1,15 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+		"ghcr.io/devcontainers-community/npm-features/prettier:1": {},
+		
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dsznajder.es7-react-js-snippets",
+				"sidharthachatterjee.vscode-tailwindcss"
+			]
+		}
+	}
+}
