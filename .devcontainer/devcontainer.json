@@ -9,7 +9,10 @@
 			"extensions": [
 				"dsznajder.es7-react-js-snippets",
 				"sidharthachatterjee.vscode-tailwindcss",
-				"ms-azuretools.vscode-docker"
+				"ms-azuretools.vscode-docker",
+				"VisualStudioExptTeam.intellicode-api-usage-examples",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"burkeholland.simple-react-snippets"
 			]
 		}
 	}
