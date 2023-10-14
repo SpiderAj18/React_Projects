@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 import AddTodos from "./components/AddTodo"
+import Todos from "./components/Todos"
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
-    React with redux 
+    <h1 className='font-bold text-blue-950 text-xl'>React with redux</h1>
     <AddTodos></AddTodos>
+    <Todos></Todos>
     
     </>
   )
