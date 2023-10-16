@@ -60,8 +60,30 @@ export class DatabaseService{
             console.log("appwrite service :: delete doc :: error",error);
             return false;
         }
+     }
+     async getPost(slug){
+        try{
+            return await this.databases.getDocument(
+                config.DatabaseId,
+                config.collectionId,
+                slug
+            )
 
+        }catch(error){
+            console.log("Appwrite service::getPost:: error",error)
+            return false;
+        }
     }
+
+     async getPosts(queries.equal){
+        try {
+            return await this.databases.listDocuments(
+                
+            )
+        } catch (error) {
+            console.log("appwrite service :: getPosts :: error",error);
+        }
+     }
 }
 
 const service = new DatabaseService();
