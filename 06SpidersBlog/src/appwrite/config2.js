@@ -1,5 +1,5 @@
 import config from "../config/config";
-import { Client,Account,ID, Databases } from "appwrite";
+import { Client,Account,ID, Databases, Query } from "appwrite";
 
 export class DatabaseService{
     client = new Client();
@@ -75,14 +75,53 @@ export class DatabaseService{
         }
     }
 
-     async getPosts(queries.equal){
+     async getPosts(queries=[Query.equal("status","active")]){
         try {
             return await this.databases.listDocuments(
+                config.DatabaseId,
+                config.collectionId,
+                queries,
                 
             )
+                
+            
         } catch (error) {
             console.log("appwrite service :: getPosts :: error",error);
         }
+     }
+
+     //file upload service
+     async uploadFile(file){
+        try {
+           return await this.bucket.createFile(
+            config.bucketId,
+            ID.unique(),
+            file
+           )               
+        } catch (error) {
+            console.log("appwrite :: uploadfile:: error",error);
+            return false;
+        }
+     }
+
+     async deleteFile(fileId){
+        try {
+             await this.bucket.deleteFile(
+                config.bucketId,
+                fileId
+            )
+            return true;
+        } catch (error) {
+            console.log("Appwrite service :: deleteFile:: error",error);
+            return false
+        }
+     }
+
+     getFilePreview(fileId){
+        return this.bucket.getFilePreview(
+            config.bucketId,
+            fileId
+        )
      }
 }
 
