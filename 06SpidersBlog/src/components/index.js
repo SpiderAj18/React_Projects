@@ -7,6 +7,8 @@ import RTE from "./RTE";
 import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import AddPost from "./pages/AddPost";
+import PostForm from "./post-form/PostForm";
 
 export {
     Header,
@@ -18,4 +20,6 @@ export {
     SignUp,
     Home,
     Login,
+    PostForm,
+    AddPost
 }
