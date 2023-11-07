@@ -9,7 +9,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import AddPost from "../pages/AddPost";
 import PostForm from "./post-form/PostForm";
-
+import AuthLayout from "./AuthLayout" 
 export {
     Header,
     Footer,
@@ -21,5 +21,6 @@ export {
     Home,
     Login,
     PostForm,
-    AddPost
+    AddPost,
+    AuthLayout
 }
